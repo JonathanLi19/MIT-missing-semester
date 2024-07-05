@@ -1,7 +1,6 @@
 name: Markdown Prose Linter
 description: Run proselint on Markdown files in the repository
 author: Quanhao Li
-shell: bash  # Replace with the shell you want to use, e.g., bash, pwsh, sh, etc.
 
 on:
   push:
@@ -18,7 +17,9 @@ runs:
         run: |
           sudo apt-get update
           sudo apt-get install -y proselint
+        shell: bash
 
       - name: Run proselint on Markdown files
         run: |
           find . -name "*.md" -type f -exec proselint {} +
+        shell: bash
