@@ -1,0 +1,14 @@
+name: 'Proselint Action'
+description: 'Run Proselyt to lint prose files'
+author: 'Your Name'
+
+inputs:
+  path:
+    description: 'Path to the directory or file to lint'
+    required: true
+    default: '.'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+

@@ -1,0 +1,15 @@
+name: Proselyt Linter
+
+on: [push, pull_request]
+
+jobs:
+  proselint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run Proselyt
+      uses: MIT-missing-semester/Proselint_Action  # Path to your action directory
+      with:
+        path: 'MIT-missing-semester/prose_files'  # Adjust as needed to point to your prose files
