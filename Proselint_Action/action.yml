@@ -6,7 +6,7 @@ inputs:
   path:
     description: 'Path to the directory or file to lint'
     required: true
-    default: '.'
+    default: './prose_files'
 
 runs:
   using: 'docker'
