@@ -10,6 +10,6 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run Proselyt
-      uses: ../../Proselint_Action  # Path to your action directory
+      uses: ./Proselint_Action  # Path to your action directory
       with:
-        path: '../../prose_files'  # Adjust as needed to point to your prose files
+        path: './prose_files'  # Adjust as needed to point to your prose files
