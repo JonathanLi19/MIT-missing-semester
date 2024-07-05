@@ -1,6 +1,7 @@
 name: Markdown Prose Linter
 description: Run proselint on Markdown files in the repository
 author: Quanhao Li
+shell: bash  # Replace with the shell you want to use, e.g., bash, pwsh, sh, etc.
 
 on:
   push:
