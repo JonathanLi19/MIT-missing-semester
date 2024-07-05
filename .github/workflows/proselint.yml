@@ -6,10 +6,5 @@ jobs:
   proselint:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Run Proselyt
-      uses: ./Proselint_Action  # Path to your action directory
-      with:
-        path: './prose_files'  # Adjust as needed to point to your prose files
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/proselint-action

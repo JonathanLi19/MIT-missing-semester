@@ -1,0 +1,24 @@
+name: Markdown Prose Linter
+description: Run proselint on Markdown files in the repository
+author: Quanhao Li
+
+on:
+  push:
+    branches:
+      - main  # Adjust based on your repository's default branch
+
+jobs:
+  proselint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y proselint
+
+      - name: Run proselint on Markdown files
+        run: |
+          find . -name "*.md" -type f -exec proselint {} +
